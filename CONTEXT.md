@@ -48,7 +48,7 @@ All pages: unique title/description, canonical, Open Graph + Twitter cards, brea
 - **TBE links:** "Powered by Tucson Badger Electric" (homepage hero) and "Visit TBE" (homepage sponsor band) link to `https://tucsonbadgerelectric.com` — **UNCONFIRMED URL, Jose must verify** (single find-replace if different).
 - **Interactive Code lessons:** Badger Code tiles on homepage + badger-code.html expand on click/Enter (aria-expanded, keyboard accessible) revealing a short life lesson + weekly "try this" challenge per rule.
 - Homepage hero CTAs: Join the Pack (tryouts) / Support the Pack (sponsor) / Live the Code (code page).
-- **TBE logo still pending as a FILE** — Jose has it (red/black badger in honeycomb hard hat, "Tucson Badger Electric LLC") but it was pasted in chat; needs to be dropped into the site folder, then wire into sponsor wall + homepage sponsor band hex spots.
+- **TBE logo = `Badger.png`** (red/black badger in honeycomb hard hat, "Tucson Badger Electric LLC") — wired 2026-06-07 into all 3 TBE spots: homepage sponsor band, sponsor-wall founding-sponsor card, sponsor page hex spot. Each img has an onerror fallback to the dashed placeholder if the file is ever missing.
 - Vercel **Web Analytics**: snippet (`/_vercel/insights/script.js`) on all 10 pages; must be enabled in Vercel dashboard → project → Analytics. Only collects on the deployed site (404s locally — normal).
 - After domain is pointed: submit `sitemap.xml` in Google Search Console.
 
