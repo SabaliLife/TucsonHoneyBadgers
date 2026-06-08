@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- updated 2026-06-07 -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Player Bio Form | Tucson Honey Badgers</title>
+<meta name="description" content="Team families only: build your player's profile for the Tucson Honey Badgers roster." />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f7a900" />
+<link rel="icon" type="image/png" href="Badger-on-Badge.PNG" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css?v=20260606d" />
+</head>
+<body>
+
+<nav aria-label="Main">
+  <div class="wrap nav-in">
+    <a href="index.html" class="brand"><img class="badge" src="Badger-on-Badge.PNG" alt="Tucson Honey Badgers crest" /> Honey Badgers</a>
+    <div class="nav-links">
+      <a href="program.html">Program</a><a href="badger-code.html">The Code</a><a href="schedule.html">Schedule</a><a href="roster.html">Squad</a><a href="tryouts.html">Tryouts</a><a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="https://www.instagram.com/tuchoneybadgers/" target="_blank" rel="noopener" class="btn ghost">@tuchoneybadgers</a>
+      <a href="tryouts.html" class="btn">Join the Pack</a>
+    </div>
+    <div class="burger" onclick="document.querySelector('.nav-links').classList.toggle('open');this.classList.toggle('x')"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <div class="kicker">Badger Families Only</div>
+    <h1>Build Your <em>Player Profile</em></h1>
+    <p class="lead">Parents and players: fill this out <b>together</b>. Your answers become the player's profile on the team roster — same questions for everyone so every Badger gets equal shine.</p>
+  </div>
+</header>
+
+<main>
+<section class="sec tight join">
+  <div class="wrap">
+    <div class="card bigcard" id="gate">
+      <div class="kicker">Invite Only</div>
+      <h3>This Form Is For Badger Families</h3>
+      <p class="sub">Player profiles are by invitation. If you got an invite, use the link we sent you — it unlocks this page automatically — or enter the team code below.</p>
+      <div class="field"><label for="gate-key">Team Code</label><input id="gate-key" type="text" placeholder="From your invite" autocomplete="off" /></div>
+      <button class="btn" type="button" id="gate-btn">Unlock</button>
+      <p class="sub" style="margin-top:14px;">Don't have a code but think you should? DM <a href="https://www.instagram.com/tuchoneybadgers/" target="_blank" rel="noopener" style="color:var(--honey-bright)">@tuchoneybadgers</a>.</p>
+    </div>
+    <div class="card bigcard" id="formcard" style="display:none">
+      <div class="formnote">
+        <b>Stuck on what to write?</b> No stress — reach out and we'll talk it through together. We just ask that the parent and player are both part of that conversation.
+        <br/><br/>
+        <b>Player photo:</b> handled separately — we'll collect headshots directly. No need to attach anything here.
+      </div>
+      <h3>Player Bio</h3>
+      <p class="sub">Takes about 10 minutes. Short and real beats long and fancy.</p>
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="hidden" name="_subject" value="Player Bio Submission - Tucson Honey Badgers" />
+        <input type="hidden" name="invite-code" id="invite-code" value="" />
+        <input type="hidden" name="form-type" value="player-bio" />
+        <input type="hidden" name="_next" value="https://tucsonhoneybadgers.com/thanks.html" />
+        <input type="text" name="_gotcha" style="display:none" />
+
+        <div class="field"><label for="p-name">Player Full Name (kept private)</label><input id="p-name" name="player-full-name" type="text" placeholder="First & last" required /></div>
+        <div class="field"><label for="p-display">Name To Show On The Website</label>
+          <select id="p-display" name="display-name-preference">
+            <option>First name + last initial (e.g. "Jordan R.")</option>
+            <option>First and last name</option>
+            <option>Nickname (tell us below)</option>
+          </select>
+        </div>
+        <div class="field"><label for="p-nick">Nickname (optional)</label><input id="p-nick" name="nickname" type="text" placeholder="What the team calls them" /></div>
+        <div class="field"><label for="p-age">Age & Grade</label><input id="p-age" name="age-grade" type="text" placeholder="e.g. 13 / 7th grade" required /></div>
+        <div class="field"><label for="p-pos">Position(s)</label><input id="p-pos" name="positions" type="text" placeholder="e.g. Guard / Wing" required /></div>
+        <div class="field"><label for="p-num">Jersey Number</label><input id="p-num" name="jersey-number" type="text" placeholder="e.g. 23" /></div>
+        <div class="field"><label for="p-years">Years Playing Basketball</label><input id="p-years" name="years-playing" type="text" placeholder="e.g. 4 years" /></div>
+        <div class="field"><label for="p-code">Which Badger Code Rule Do You Live Best?</label>
+          <select id="p-code" name="badger-code-rule">
+            <option>1 — Fear Nothing</option>
+            <option>2 — Outwork Everyone</option>
+            <option>3 — Protect The Hive</option>
+            <option>4 — Respect All</option>
+            <option>5 — School First</option>
+            <option>6 — Bring The Energy</option>
+          </select>
+        </div>
+        <div class="field"><label for="p-fav">Favorite Player or Team</label><input id="p-fav" name="favorite-player-team" type="text" placeholder="Who do you watch?" /></div>
+        <div class="field"><label for="p-subj">Favorite Subject In School</label><input id="p-subj" name="favorite-subject" type="text" placeholder="School first, always" /></div>
+        <div class="field"><label for="p-fun">Fun Fact About You</label><input id="p-fun" name="fun-fact" type="text" placeholder="Something the team might not know" /></div>
+        <div class="field"><label for="p-bio">Short Bio (3–5 sentences)</label>
+          <textarea id="p-bio" name="short-bio" rows="5" required placeholder="How did you start playing? What do you love about the game? What are you working on this season? What do you want to be known for as a Badger?"></textarea>
+        </div>
+        <div class="field"><label for="p-parent">Parent / Guardian Name</label><input id="p-parent" name="parent-name" type="text" placeholder="First & last" required /></div>
+        <div class="field"><label for="p-email">Parent / Guardian Email</label><input id="p-email" name="parent-email" type="email" placeholder="you@email.com" required /></div>
+
+        <label class="consent">
+          <input type="checkbox" name="media-release-consent" value="yes" required />
+          <span><b>Media release:</b> I am this player's parent/guardian and I consent to the Tucson Honey Badgers publishing the name preference selected above, photo, and bio on tucsonhoneybadgers.com and team social media. I can ask for it to be removed at any time.</span>
+        </label>
+
+        <button class="btn" type="submit">Send The Bio</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-bottom" style="border-top:none;padding-top:0;">
+      <span>© 2026 Tucson Honey Badgers Basketball. All rights reserved.</span>
+      <span>Powered by Tucson Badger Electric ⚡</span>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){
+  var HASH='bea6ba2d8af65e1f2d061031124e590ef47b431d91944ed62eae52f183eca663';
+  function sha(s){return crypto.subtle.digest('SHA-256',new TextEncoder().encode(s)).then(function(b){return Array.from(new Uint8Array(b)).map(function(x){return x.toString(16).padStart(2,'0')}).join('')})}
+  function unlock(k){document.getElementById('gate').style.display='none';document.getElementById('formcard').style.display='';document.getElementById('invite-code').value=k;try{sessionStorage.setItem('hb-player-key',k)}catch(e){}}
+  function tryKey(k){k=(k||'').trim().toUpperCase();if(!k)return;try{sha(k).then(function(h){if(h===HASH)unlock(k);else shake()})}catch(e){}}
+  function shake(){var i=document.getElementById('gate-key');i.style.borderColor='#e8553a';i.value='';i.placeholder='Not it — check your invite';}
+  document.getElementById('gate-btn').addEventListener('click',function(){tryKey(document.getElementById('gate-key').value)});
+  document.getElementById('gate-key').addEventListener('keydown',function(e){if(e.key==='Enter')tryKey(this.value)});
+  var p=new URLSearchParams(location.search).get('key');var s=null;try{s=sessionStorage.getItem('hb-player-key')}catch(e){}
+  if(p)tryKey(p);else if(s)tryKey(s);
+})();
+</script>
+</body>
+</html>

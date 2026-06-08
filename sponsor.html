@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=20260606b" />
+<link rel="stylesheet" href="styles.css?v=20260606d" />
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -94,10 +94,80 @@
     </div>
   </div>
 </section>
-<section class="sec tight">
-  <div class="wrap prose reveal in">
-    <h2>Want To Back <em>The Pack?</em></h2>
-    <p>We welcome additional community sponsors — court banners, jersey patches, tournament travel, and scholarship spots. Every dollar goes to getting Tucson kids on the court. <a href="contact.html">Contact us</a> to talk sponsorship tiers.</p>
+<section class="sec tight roster">
+  <div class="wrap">
+    <div class="sec-head reveal in">
+      <div class="kicker">The Wall</div>
+      <h2>Sponsors Of <em>The Hive</em></h2>
+      <p>The businesses and people keeping Tucson kids on the court. Your name belongs up here.</p>
+    </div>
+    <div class="sponsor-wall">
+      <div class="sponsor-card featured reveal in">
+        <div class="hexspot"><svg class="frame" viewBox="0 0 100 115" preserveAspectRatio="none" aria-hidden="true"><use href="#hexframe"/></svg><span class="slot-label">TBE logo</span></div>
+        <h3>Tucson Badger Electric</h3>
+        <span class="tier">Founding Sponsor</span>
+        <small>Local. Licensed. Relentless.</small>
+      </div>
+      <div class="sponsor-card reveal in">
+        <div class="hexspot"><svg class="frame" viewBox="0 0 100 115" preserveAspectRatio="none" aria-hidden="true"><use href="#hexframe"/></svg><span class="slot-label">Your logo</span></div>
+        <h3>This Spot Is Open</h3>
+        <small>Back the pack — big or small</small>
+      </div>
+      <div class="sponsor-card reveal in">
+        <div class="hexspot"><svg class="frame" viewBox="0 0 100 115" preserveAspectRatio="none" aria-hidden="true"><use href="#hexframe"/></svg><span class="slot-label">Your logo</span></div>
+        <h3>This Spot Is Open</h3>
+        <small>Back the pack — big or small</small>
+      </div>
+      <div class="sponsor-card reveal in">
+        <div class="hexspot"><svg class="frame" viewBox="0 0 100 115" preserveAspectRatio="none" aria-hidden="true"><use href="#hexframe"/></svg><span class="slot-label">Your logo</span></div>
+        <h3>This Spot Is Open</h3>
+        <small>Back the pack — big or small</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="back-the-pack" class="sec join">
+  <div class="wrap">
+    <div class="join-grid">
+      <div class="reveal in">
+        <h2>Back The <span class="stroke">Pack</span></h2>
+        <p style="color:var(--cream);font-size:17px;line-height:1.6;margin:18px 0;">Here's the truth about youth sports: <b style="color:var(--honey-bright);">a little bit of help from a lot of people goes a long way.</b> You don't have to write a big check to matter to this team.</p>
+        <ul>
+          <li><span class="chk"></span> <b>Funds</b> — tournament fees, scholarships, uniforms.</li>
+          <li><span class="chk"></span> <b>Gear</b> — balls, shoes, practice equipment.</li>
+          <li><span class="chk"></span> <b>Gym time</b> — courts and practice space.</li>
+          <li><span class="chk"></span> <b>Travel & meals</b> — getting the pack to tournaments, fed.</li>
+          <li><span class="chk"></span> <b>Time & skills</b> — photography, scorekeeping, carpools, first aid, anything.</li>
+        </ul>
+        <p style="color:var(--muted);font-size:14px;">Every contribution gets acknowledged. Business sponsors get a spot on the wall above.</p>
+      </div>
+      <div class="card reveal in">
+        <h3>Join The Cause</h3>
+        <p class="sub">Tell us how you'd like to help — we'll follow up personally.</p>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="hidden" name="_subject" value="Sponsor / Supporter Inquiry - Tucson Honey Badgers" />
+          <input type="hidden" name="form-type" value="sponsor" />
+          <input type="hidden" name="_next" value="https://tucsonhoneybadgers.com/thanks.html" />
+          <input type="text" name="_gotcha" style="display:none" />
+          <div class="field"><label for="s-name">Your Name</label><input id="s-name" name="contact-name" type="text" placeholder="First & last" required /></div>
+          <div class="field"><label for="s-biz">Business / Organization (optional)</label><input id="s-biz" name="business-name" type="text" placeholder="If you're representing one" /></div>
+          <div class="field"><label for="s-email">Email</label><input id="s-email" name="email" type="email" placeholder="you@email.com" required /></div>
+          <div class="field"><label>How Would You Like To Help? (check all that apply)</label>
+            <div class="checks">
+              <label><input type="checkbox" name="help[]" value="funds" /> Funds</label>
+              <label><input type="checkbox" name="help[]" value="gear" /> Gear / equipment</label>
+              <label><input type="checkbox" name="help[]" value="gym-time" /> Gym time</label>
+              <label><input type="checkbox" name="help[]" value="travel-meals" /> Travel / meals</label>
+              <label><input type="checkbox" name="help[]" value="time-skills" /> Time / skills</label>
+              <label><input type="checkbox" name="help[]" value="other" /> Something else</label>
+            </div>
+          </div>
+          <div class="field"><label for="s-msg">Anything Else We Should Know?</label><textarea id="s-msg" name="message" rows="3" placeholder="Optional — details, questions, ideas"></textarea></div>
+          <button class="btn" type="submit">Back The Pack</button>
+        </form>
+      </div>
+    </div>
   </div>
 </section>
 </main>
@@ -114,7 +184,7 @@
     <div class="foot-grid">
       <div class="foot-brand">
         <a href="index.html"><img class="foot-logo" src="Text-ONLY-NO-PAWS-NO-OUTLINE.PNG" alt="Honey Badgers wordmark" /></a>
-        <p>Tucson AAU youth basketball built on grit, skill, and heart. Pound-for-pound, the toughest in the desert.</p>
+        <p>Tucson youth club basketball built on grit, skill, and heart. Pound-for-pound, the toughest in the desert.</p>
         <a class="ig" href="https://www.instagram.com/tuchoneybadgers/" target="_blank" rel="noopener">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f7a900" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#f7a900" stroke="none"/></svg>
           @tuchoneybadgers
@@ -122,7 +192,7 @@
       </div>
       <div class="foot-col"><h4>The Club</h4><a href="program.html">Program</a><a href="badger-code.html">The Badger Code</a><a href="roster.html">The Squad</a><a href="schedule.html">Schedule</a></div>
       <div class="foot-col"><h4>Get Involved</h4><a href="tryouts.html">Tryouts</a><a href="sponsor.html">Sponsorship</a><a href="contact.html">Contact Us</a><a href="https://www.instagram.com/tuchoneybadgers/" target="_blank" rel="noopener">Instagram</a></div>
-      <div class="foot-col"><h4>Basketball in Tucson</h4><a href="aau-basketball-tucson.html">AAU Basketball in Tucson</a><a href="youth-basketball-tucson.html">Youth Basketball in Tucson</a></div>
+      <div class="foot-col"><h4>Basketball in Tucson</h4><a href="club-basketball-tucson.html">Club Basketball in Tucson</a><a href="youth-basketball-tucson.html">Youth Basketball in Tucson</a></div>
     </div>
     <div class="foot-bottom">
       <span>(c) 2026 Tucson Honey Badgers Basketball. All rights reserved.</span>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- updated 2026-06-07 -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Coach Bio Form | Tucson Honey Badgers</title>
+<meta name="description" content="Coaching staff only: build your coach profile for the Tucson Honey Badgers." />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#f7a900" />
+<link rel="icon" type="image/png" href="Badger-on-Badge.PNG" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css?v=20260606d" />
+</head>
+<body>
+
+<nav aria-label="Main">
+  <div class="wrap nav-in">
+    <a href="index.html" class="brand"><img class="badge" src="Badger-on-Badge.PNG" alt="Tucson Honey Badgers crest" /> Honey Badgers</a>
+    <div class="nav-links">
+      <a href="program.html">Program</a><a href="badger-code.html">The Code</a><a href="schedule.html">Schedule</a><a href="roster.html">Squad</a><a href="tryouts.html">Tryouts</a><a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="https://www.instagram.com/tuchoneybadgers/" target="_blank" rel="noopener" class="btn ghost">@tuchoneybadgers</a>
+      <a href="tryouts.html" class="btn">Join the Pack</a>
+    </div>
+    <div class="burger" onclick="document.querySelector('.nav-links').classList.toggle('open');this.classList.toggle('x')"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <div class="kicker">Coaching Staff Only</div>
+    <h1>Build Your <em>Coach Profile</em></h1>
+    <p class="lead">Same idea as the player bios — aligned questions so the staff page speaks with one voice: development, character, community.</p>
+  </div>
+</header>
+
+<main>
+<section class="sec tight join">
+  <div class="wrap">
+    <div class="card bigcard" id="gate">
+      <div class="kicker">Invite Only</div>
+      <h3>This Form Is For Badger Staff</h3>
+      <p class="sub">Coach profiles are by invitation. Use the link you were sent — it unlocks this page automatically — or enter the staff code below.</p>
+      <div class="field"><label for="gate-key">Staff Code</label><input id="gate-key" type="text" placeholder="From your invite" autocomplete="off" /></div>
+      <button class="btn" type="button" id="gate-btn">Unlock</button>
+      <p class="sub" style="margin-top:14px;">Don't have a code but think you should? DM <a href="https://www.instagram.com/tuchoneybadgers/" target="_blank" rel="noopener" style="color:var(--honey-bright)">@tuchoneybadgers</a>.</p>
+    </div>
+    <div class="card bigcard" id="formcard" style="display:none">
+      <div class="formnote">
+        <b>Want a hand with it?</b> Reach out and we'll talk it through together.
+        <br/><br/>
+        <b>Coach photo:</b> handled separately — we'll collect headshots directly. No need to attach anything here.
+      </div>
+      <h3>Coach Bio</h3>
+      <p class="sub">Parents read this page deciding whether to trust us with their kid. Write to them.</p>
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="hidden" name="_subject" value="Coach Bio Submission - Tucson Honey Badgers" />
+        <input type="hidden" name="invite-code" id="invite-code" value="" />
+        <input type="hidden" name="form-type" value="coach-bio" />
+        <input type="hidden" name="_next" value="https://tucsonhoneybadgers.com/thanks.html" />
+        <input type="text" name="_gotcha" style="display:none" />
+
+        <div class="field"><label for="c-name">Full Name</label><input id="c-name" name="coach-name" type="text" placeholder="First & last" required /></div>
+        <div class="field"><label for="c-role">Role</label>
+          <select id="c-role" name="role">
+            <option>Head Coach</option>
+            <option>Assistant Coach</option>
+            <option>Skills Trainer</option>
+            <option>Team Manager / Operations</option>
+            <option>Other (explain in bio)</option>
+          </select>
+        </div>
+        <div class="field"><label for="c-years">Years Coaching</label><input id="c-years" name="years-coaching" type="text" placeholder="e.g. 8 years (4 youth, 4 high school)" required /></div>
+        <div class="field"><label for="c-playing">Playing Background</label><input id="c-playing" name="playing-background" type="text" placeholder="e.g. Played at Tucson High, intramural in college" /></div>
+        <div class="field"><label for="c-phil">Your Coaching Philosophy In One Sentence</label><input id="c-phil" name="philosophy" type="text" placeholder="What you believe about developing young players" required /></div>
+        <div class="field"><label for="c-code">Which Badger Code Rule Do You Coach The Hardest?</label>
+          <select id="c-code" name="badger-code-rule">
+            <option>1 — Fear Nothing</option>
+            <option>2 — Outwork Everyone</option>
+            <option>3 — Protect The Hive</option>
+            <option>4 — Respect All</option>
+            <option>5 — School First</option>
+            <option>6 — Bring The Energy</option>
+          </select>
+        </div>
+        <div class="field"><label for="c-community">Community & Tucson Ties</label>
+          <textarea id="c-community" name="community-ties" rows="3" placeholder="Day job, volunteer work, how long you've been in Tucson, why this community matters to you"></textarea>
+        </div>
+        <div class="field"><label for="c-drill">Favorite Drill Or Practice Moment</label><input id="c-drill" name="favorite-drill" type="text" placeholder="The one the kids groan about (or love)" /></div>
+        <div class="field"><label for="c-bio">Short Bio (4–6 sentences)</label>
+          <textarea id="c-bio" name="short-bio" rows="5" required placeholder="Who you are, why you coach, what a parent should know about how you'll treat their kid, and what winning means to you beyond the scoreboard."></textarea>
+        </div>
+        <div class="field"><label for="c-email">Email</label><input id="c-email" name="email" type="email" placeholder="you@email.com" required /></div>
+
+        <label class="consent">
+          <input type="checkbox" name="publish-consent" value="yes" required />
+          <span>I consent to the Tucson Honey Badgers publishing my name, photo, and bio on tucsonhoneybadgers.com and team social media.</span>
+        </label>
+
+        <button class="btn" type="submit">Send The Bio</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-bottom" style="border-top:none;padding-top:0;">
+      <span>© 2026 Tucson Honey Badgers Basketball. All rights reserved.</span>
+      <span>Powered by Tucson Badger Electric ⚡</span>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){
+  var HASH='eb7e7868c5ed997deff0f392f80247d615378d460c139174296f5ecaf077f11f';
+  function sha(s){return crypto.subtle.digest('SHA-256',new TextEncoder().encode(s)).then(function(b){return Array.from(new Uint8Array(b)).map(function(x){return x.toString(16).padStart(2,'0')}).join('')})}
+  function unlock(k){document.getElementById('gate').style.display='none';document.getElementById('formcard').style.display='';document.getElementById('invite-code').value=k;try{sessionStorage.setItem('hb-coach-key',k)}catch(e){}}
+  function tryKey(k){k=(k||'').trim().toUpperCase();if(!k)return;try{sha(k).then(function(h){if(h===HASH)unlock(k);else shake()})}catch(e){}}
+  function shake(){var i=document.getElementById('gate-key');i.style.borderColor='#e8553a';i.value='';i.placeholder='Not it — check your invite';}
+  document.getElementById('gate-btn').addEventListener('click',function(){tryKey(document.getElementById('gate-key').value)});
+  document.getElementById('gate-key').addEventListener('keydown',function(e){if(e.key==='Enter')tryKey(this.value)});
+  var p=new URLSearchParams(location.search).get('key');var s=null;try{s=sessionStorage.getItem('hb-coach-key')}catch(e){}
+  if(p)tryKey(p);else if(s)tryKey(s);
+})();
+</script>
+</body>
+</html>

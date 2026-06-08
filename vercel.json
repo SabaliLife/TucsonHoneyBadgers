@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/aau-basketball-tucson.html",
+      "destination": "/club-basketball-tucson.html",
+      "permanent": true
+    }
+  ]
+}

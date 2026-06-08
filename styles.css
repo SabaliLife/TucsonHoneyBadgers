@@ -1,5 +1,5 @@
 /* ===== Tucson Honey Badgers — shared theme ===== */
-/* v2026-06-06b — mobile menu fix (absolute dropdown) + mobile spacing polish */
+/* v2026-06-06d — expandable Code lessons, TBE links, focus accessibility — updated 2026-06-07 */
 :root{
   --black:#0a0a0a; --ink:#141414; --panel:#1a1a1a;
   --honey:#f7a900; --honey-bright:#ffc233; --amber:#e8820c; --honey-deep:#c97e06;
@@ -229,3 +229,39 @@ footer{background:#070705;border-top:1px solid var(--line);padding:64px 0 36px;}
   .game{grid-template-columns:70px 1fr;} .game .where{grid-column:1/-1;text-align:left;}
 }
 @media(max-width:560px){ .pillars{grid-template-columns:1fr;} .squad{grid-template-columns:1fr;} .code-grid{grid-template-columns:1fr;} .foot-grid{grid-template-columns:1fr;} }
+
+/* ===== forms system (bios, sponsors) ===== */
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:4px 0 14px;}
+.checks label{display:flex;gap:10px;align-items:center;font-size:14px;color:var(--cream);background:#0c0a06;border:1px solid var(--line);border-radius:5px;padding:11px 12px;cursor:pointer;}
+.checks input{accent-color:var(--honey);width:16px;height:16px;flex:0 0 16px;}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--muted);line-height:1.5;margin:6px 0 16px;}
+.consent input{margin-top:3px;accent-color:var(--honey);flex:0 0 16px;width:16px;height:16px;}
+.formnote{background:rgba(247,169,0,.08);border:1px solid var(--line);border-left:3px solid var(--honey);border-radius:6px;padding:14px 16px;font-size:14px;color:var(--cream);line-height:1.55;margin:0 0 20px;}
+.formnote b{color:var(--honey-bright);}
+.bigcard{max-width:760px;margin:0 auto;}
+.sponsor-wall{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.sponsor-card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:26px 18px;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;}
+.sponsor-card.featured{border-color:var(--honey);background:#1c150a;box-shadow:0 0 30px rgba(247,169,0,.08);}
+.sponsor-card .hexspot{width:96px;aspect-ratio:.87/1;}
+.sponsor-card h3{font-family:'Barlow Condensed',sans-serif;font-size:19px;color:var(--cream);letter-spacing:.04em;}
+.sponsor-card small{color:var(--muted);font-size:12px;}
+.sponsor-card .tier{font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:11px;background:rgba(247,169,0,.14);color:var(--honey-bright);padding:3px 10px;border-radius:3px;}
+@media(max-width:900px){ .sponsor-wall{grid-template-columns:repeat(2,1fr);} }
+@media(max-width:560px){ .sponsor-wall{grid-template-columns:1fr;} .checks{grid-template-columns:1fr;} }
+
+/* ===== expandable Badger Code lessons ===== */
+.rule[data-exp]{cursor:pointer;}
+.rule .lesson{display:none;margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);}
+.rule.open .lesson{display:block;}
+.rule .lesson p{color:var(--cream);opacity:.88;font-size:14px;line-height:1.6;}
+.rule .lesson p+p{margin-top:8px;}
+.rule .lesson .try{color:var(--honey-bright);font-family:'Barlow Condensed',sans-serif;font-weight:600;letter-spacing:.03em;}
+.rule .more{display:inline-block;margin-top:10px;font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:11px;color:var(--honey);}
+.rule .more::after{content:" +";}
+.rule.open .more::after{content:" −";}
+
+/* ===== accessibility: visible keyboard focus ===== */
+a:focus-visible,.btn:focus-visible,.burger:focus-visible,.rule[data-exp]:focus-visible{outline:2px solid var(--honey-bright);outline-offset:3px;border-radius:3px;}
+.field input:focus-visible,.field select:focus-visible,.field textarea:focus-visible{outline:2px solid var(--honey-bright);outline-offset:1px;}
+.powered a{color:var(--honey-bright);font-weight:700;border-bottom:1px solid var(--line);transition:.2s;}
+.powered a:hover{color:var(--honey);border-color:var(--honey);}

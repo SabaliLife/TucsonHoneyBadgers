@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Contact | Tucson Honey Badgers Basketball</title>
-<meta name="description" content="Contact the Tucson Honey Badgers AAU basketball club: tryouts, schedules, sponsorship, and media. DM @tuchoneybadgers on Instagram for the fastest reply." />
+<meta name="description" content="Contact the Tucson Honey Badgers club basketball team: tryouts, schedules, sponsorship, and media. DM @tuchoneybadgers on Instagram for the fastest reply." />
 <link rel="canonical" href="https://tucsonhoneybadgers.com/contact.html" />
 <meta name="robots" content="index, follow" />
 <meta name="theme-color" content="#f7a900" />
@@ -12,16 +12,16 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Tucson Honey Badgers" />
 <meta property="og:title" content="Contact | Tucson Honey Badgers Basketball" />
-<meta property="og:description" content="Contact the Tucson Honey Badgers AAU basketball club: tryouts, schedules, sponsorship, and media. DM @tuchoneybadgers on Instagram for the fastest reply." />
+<meta property="og:description" content="Contact the Tucson Honey Badgers club basketball team: tryouts, schedules, sponsorship, and media. DM @tuchoneybadgers on Instagram for the fastest reply." />
 <meta property="og:url" content="https://tucsonhoneybadgers.com/contact.html" />
 <meta property="og:image" content="https://tucsonhoneybadgers.com/Badger-and-Text-NO-OUTLINE.PNG" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Contact | Tucson Honey Badgers Basketball" />
-<meta name="twitter:description" content="Contact the Tucson Honey Badgers AAU basketball club: tryouts, schedules, sponsorship, and media. DM @tuchoneybadgers on Instagram for the fastest reply." />
+<meta name="twitter:description" content="Contact the Tucson Honey Badgers club basketball team: tryouts, schedules, sponsorship, and media. DM @tuchoneybadgers on Instagram for the fastest reply." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=20260606b" />
+<link rel="stylesheet" href="styles.css?v=20260606d" />
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -112,11 +112,15 @@
       <div class="card reveal in">
         <h3>Send A Message</h3>
         <p class="sub">We read everything. Expect a reply within a day or two.</p>
-        <form onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Sent! Talk soon';">
-          <div class="field"><label for="nm">Name</label><input id="nm" type="text" placeholder="Your name" required/></div>
-          <div class="field"><label for="em">Email</label><input id="em" type="email" placeholder="you@email.com" required/></div>
-          <div class="field"><label for="tp">Topic</label><select id="tp"><option>Tryouts</option><option>Schedule</option><option>Sponsorship</option><option>Media</option><option>Other</option></select></div>
-          <div class="field"><label for="ms">Message</label><textarea id="ms" rows="4" placeholder="What's up?" required></textarea></div>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="hidden" name="_subject" value="Contact Message - Tucson Honey Badgers" />
+          <input type="hidden" name="form-type" value="contact" />
+          <input type="hidden" name="_next" value="https://tucsonhoneybadgers.com/thanks.html" />
+          <input type="text" name="_gotcha" style="display:none" />
+          <div class="field"><label for="nm">Name</label><input id="nm" name="name" type="text" placeholder="Your name" required/></div>
+          <div class="field"><label for="em">Email</label><input id="em" name="email" type="email" placeholder="you@email.com" required/></div>
+          <div class="field"><label for="tp">Topic</label><select id="tp" name="topic"><option>Tryouts</option><option>Schedule</option><option>Sponsorship</option><option>Media</option><option>Other</option></select></div>
+          <div class="field"><label for="ms">Message</label><textarea id="ms" name="message" rows="4" placeholder="What's up?" required></textarea></div>
           <button class="btn" type="submit">Send It</button>
         </form>
       </div>
@@ -132,7 +136,7 @@
     <div class="foot-grid">
       <div class="foot-brand">
         <a href="index.html"><img class="foot-logo" src="Text-ONLY-NO-PAWS-NO-OUTLINE.PNG" alt="Honey Badgers wordmark" /></a>
-        <p>Tucson AAU youth basketball built on grit, skill, and heart. Pound-for-pound, the toughest in the desert.</p>
+        <p>Tucson youth club basketball built on grit, skill, and heart. Pound-for-pound, the toughest in the desert.</p>
         <a class="ig" href="https://www.instagram.com/tuchoneybadgers/" target="_blank" rel="noopener">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f7a900" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#f7a900" stroke="none"/></svg>
           @tuchoneybadgers
@@ -140,7 +144,7 @@
       </div>
       <div class="foot-col"><h4>The Club</h4><a href="program.html">Program</a><a href="badger-code.html">The Badger Code</a><a href="roster.html">The Squad</a><a href="schedule.html">Schedule</a></div>
       <div class="foot-col"><h4>Get Involved</h4><a href="tryouts.html">Tryouts</a><a href="sponsor.html">Sponsorship</a><a href="contact.html">Contact Us</a><a href="https://www.instagram.com/tuchoneybadgers/" target="_blank" rel="noopener">Instagram</a></div>
-      <div class="foot-col"><h4>Basketball in Tucson</h4><a href="aau-basketball-tucson.html">AAU Basketball in Tucson</a><a href="youth-basketball-tucson.html">Youth Basketball in Tucson</a></div>
+      <div class="foot-col"><h4>Basketball in Tucson</h4><a href="club-basketball-tucson.html">Club Basketball in Tucson</a><a href="youth-basketball-tucson.html">Youth Basketball in Tucson</a></div>
     </div>
     <div class="foot-bottom">
       <span>(c) 2026 Tucson Honey Badgers Basketball. All rights reserved.</span>
