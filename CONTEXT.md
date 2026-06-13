@@ -1,6 +1,6 @@
 # Tucson Honey Badgers — Project Context
 
-*Last updated: June 6, 2026. This is the living context document for the Honey Badgers website project. Update it as decisions are made.*
+*Last updated: June 12, 2026. This is the living context document for the Honey Badgers website project. Update it as decisions are made.*
 
 ## What this is
 
@@ -68,13 +68,18 @@ Six forms, all wired to Formspree with hidden `form-type` field to tell them apa
 
 Player bio form includes: display-name preference (first name + last initial default for minors), media-release consent checkbox (required), Badger Code alignment question, "reach out and we'll talk it through together — parent and player both involved" note. Photos are collected SEPARATELY (Jose handles) — forms say so explicitly.
 
-**TO ACTIVATE (waiting on Jose):** Jose is getting the team "badger email" address. Once he has it: (1) create free Formspree account with that email, (2) create a form, copy its ID, (3) find-and-replace `YOUR_FORM_ID` across all HTML files (6 form tags in 6 files). Submissions then land in the badger inbox. Until then, forms show but submissions go nowhere.
+**ACTIVATED (2026-06-12):** Team email is **tuchoneybadgers@gmail.com**. All 6 forms point to Formspree endpoint `https://formspree.io/f/xnjyozke` — Jose set up a fresh form under the Gmail and confirmed this is the live form ID (replaced the earlier `xykvovrq`, 2026-06-12). Next: submit a live test through tryouts/contact on the deployed site to confirm delivery (bio forms need HTTPS for the code gate anyway).
+
+**Print handouts (added 2026-06-12), for collecting bio data on paper (e.g. picture day):**
+- `player-bio-print.html` + `coach-bio-print.html` — print-optimized one-pagers mirroring the online bio forms exactly (same questions, checkbox versions of the dropdowns, media-release consent with signature+date line). Open → Ctrl/Cmd+P. `noindex`, deploy fine; the on-screen helper note is hidden when printing. NO invite gate on paper — physical handout is the gate.
+- Matching PDFs (`player-bio-print.pdf`, `coach-bio-print.pdf`) were generated and handed to Jose for printing/photocopying; not in the repo unless he drops them in.
 
 **Flow for profiles:** bio forms come in by email → build public player/coach profile pages from them → roster cards link to profiles (click a player card → player page). Profiles use display-name preference; first name + last initial is the default for minors.
 
 ## Backlog
 
-1. **Activate forms:** badger email → Formspree ID → replace `YOUR_FORM_ID` (see Forms system above).
+1. ~~Activate forms~~ DONE 2026-06-12 (see Forms system) — live test still pending.
+1b. **Delete `photo-info-form.html`** — stray file from 2026-06-12 session (built before the real forms synced into view; superseded by the bio forms + print handouts). Jose: just delete it.
 2. **Player/coach profile pages:** as bios arrive, build profile pages and link roster cards to them.
 3. **Real content drops** (slots are built and labeled, swap-in ready):
    - Team/action photo (homepage About hex spot)
