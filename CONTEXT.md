@@ -119,6 +119,11 @@ Player bio form includes: display-name preference (first name + last initial def
 - **Still placeholder** on every profile: position, grade, years playing, bio text, Code rule, fav player/team, fav subject, fun fact, social handles — all marked `[ bracketed ]`. Fill from the bio forms (Jose pasting them in).
 - Build helper `_gen_profiles.py` is in the folder but excluded from deploy via `.vercelignore` (`*.py`).
 
+**Bios filled (2026-06-18)** from paper forms for 7 players: Cam #0, Fernando #5, Leslie/LC #10, Damian #11, Isaac #14, Nico #15, Mac #23. Filled position/grade/years/fav/subject/fun-fact/code where given; "Lives The Code By" lists ALL rules a player checked (some checked multiple). Blank fields show "Coming soon."
+- **Name fixes:** "Damien" → **"Damian"** in all page content (profile + roster); the FILE/slug stays `damien-11.html` (URL only, not user-visible). Nickname "Machewei" → **"Machiwi"** in all page content AND image references. **ACTION FOR JOSE: rename 8 photo files** `Machewei*.JPG` → `Machiwi*.JPG` (Machewei, Machewei2-5, MacheweiXNico, MacheweiXZeo, MacheweiXZeo2) so they match the site.
+- **No bio form yet:** #3 Zeo, #12 Penny, #24 Tonio, #77 Nogi (profiles show "Coming soon").
+- **Unresolved:** Fernando's form chose "First & last name" (site still shows "Fernando B."); Mac also goes by "Big Mac" (site shows "Mac" only). Pending Jose's call on honoring per-form name prefs vs. blanket first-initial.
+
 ## Decision log
 
 - Jose likes the current layout; iterate visually, don't restructure without asking.
