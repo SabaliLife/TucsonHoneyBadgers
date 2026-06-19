@@ -21,7 +21,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=20260607e" />
+<link rel="stylesheet" href="styles.css?v=20260618a" />
+<style>
+  /* bigger, wider flat-top hex for the team photo so the whole squad fits */
+  .about-art .about-hex{width:min(560px,100%);aspect-ratio:1.33/1;}
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -119,6 +123,7 @@
       <div class="about-art reveal">
         <div class="about-hex hexspot">
           <svg class="frame" viewBox="0 0 100 115" preserveAspectRatio="none" aria-hidden="true"><use href="#hexframe"/></svg>
+          <img src="Photos/Live%20On%20Site/BadgerTeamPhoto.JPG" alt="Tucson Honey Badgers team photo" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;clip-path:polygon(12% 0,88% 0,100% 50%,88% 100%,12% 100%,0 50%);" onerror="this.remove()" />
           <span class="slot-label">Team / action photo</span>
           <small>pull from @tuchoneybadgers</small>
         </div>

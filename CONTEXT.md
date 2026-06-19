@@ -80,7 +80,7 @@ Player bio form includes: display-name preference (first name + last initial def
 
 1. ~~Activate forms~~ DONE 2026-06-12 (see Forms system) — live test still pending.
 1b. **Delete `photo-info-form.html`** — stray file from 2026-06-12 session (built before the real forms synced into view; superseded by the bio forms + print handouts). Jose: just delete it.
-2. **Player/coach profile pages:** as bios arrive, build profile pages and link roster cards to them.
+2. **Player/coach profile pages:** ~~build profile pages and link roster cards~~ DONE for players 2026-06-18 (see Roster & profiles below). Remaining: fill real bio/social/photo content as it arrives; flip each profile from `noindex` to indexable once populated. Coach profiles not built yet.
 3. **Real content drops** (slots are built and labeled, swap-in ready):
    - Team/action photo (homepage About hex spot)
    - Player headshots, names, numbers (roster cards)
@@ -91,6 +91,33 @@ Player bio form includes: display-name preference (first name + last initial def
 4. **Vercel Speed Insights** (optional) — add `/_vercel/speed-insights/script.js` to all pages.
 5. **og-image** (optional) — purpose-built 1200×630 social card instead of the raw lockup PNG.
 6. **Instagram feed integration** (later) — surface @tuchoneybadgers posts on the site.
+
+## Roster & profiles (built 2026-06-18)
+
+11-player 2026 squad on `roster.html`, ordered by jersey number, shown as **first name + last initial** + nickname (privacy-safe default for minors, confirmed by Jose). Each card is a link to that player's profile page.
+
+| # | Display | Nick | profile / photo slug |
+|---|---|---|---|
+| 0 | Cam G. | — | cam-0 |
+| 3 | Elizeo C. | Zeo | zeo-3 |
+| 5 | Fernando B. | Little Nando | nando-5 |
+| 10 | Leslie T. | LC | leslie-10 |
+| 11 | Damien B. | Dame | damien-11 |
+| 12 | Penny E. | — | penny-12 |
+| 14 | Isaac C. | Machewei | isaac-14 |
+| 15 | Nico G. | — | nico-15 |
+| 23 | Macauley D. | Mac | mac-23 |
+| 24 | Antonio H. | Tonio | tonio-24 |
+| 77 | Nico N. | Nogi | nogi-77 |
+
+- **Profile pages** (`<slug>.html`, e.g. `zeo-3.html`) all built from one template: hero photo + identity, stats strip, bio, "get to know" tiles (Code rule, fav player/team, fav subject, fun fact), social handles row, photo gallery. Profile-specific CSS is **inline in each page** (so editing it does NOT require a sitewide cache bump). All set `noindex, follow` until real content is added. Private bio fields (full name, parent name/email) are never shown.
+- **Photos (placed 2026-06-18):** Jose's photos live in **`Photos/Live On Site/`** (named by nickname, or first name if none; multi-person = `LCXZeo` style; main team = `BadgerTeamPhoto.JPG`). They're referenced **in place** in the HTML via `Photos/Live%20On%20Site/<File>` (space = `%20`, case-sensitive, mostly `.JPG` — note `Zeo2.jpeg` and lowercase `zeo3.JPG`). The `Photos` folder deploys with the site (not in `.vercelignore`).
+  - **Profile hero + gallery** now use these in-place solos. LC (#10) had no solo → hero uses group `LCXZeo.JPG`. **Nogi (#77) has NO photos at all → still placeholder.** Galleries: Zeo 5, Machewei 4, Tonio 4, Dame 3, Nando/Nico/Mac 1 each; Cam/Penny/LC/Nogi none (placeholders remain).
+  - **Squad page** (`roster.html`) has a "Pack In Action" gallery: all 10 group/duo shots + 7 `Badgers#` action shots.
+  - **Homepage** About hexagon = `BadgerTeamPhoto.JPG` (clip-path hex, object-fit cover).
+  - **Roster card headshots** still use the `<slug>.jpg` convention (e.g. `zeo-3.jpg`) — these are the SEPARATE headshots Jose will add later; they show placeholder until dropped in. Photos are full-res originals referenced directly (not optimized — could compress later when shell is available).
+- **Still placeholder** on every profile: position, grade, years playing, bio text, Code rule, fav player/team, fav subject, fun fact, social handles — all marked `[ bracketed ]`. Fill from the bio forms (Jose pasting them in).
+- Build helper `_gen_profiles.py` is in the folder but excluded from deploy via `.vercelignore` (`*.py`).
 
 ## Decision log
 
