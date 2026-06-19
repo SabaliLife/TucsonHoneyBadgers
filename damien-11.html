@@ -59,7 +59,7 @@
     <section class="pf-hero">
       <div class="pf-photo">
         <span class="pf-num">11</span>
-        <img src="Dame.JPG" alt="Damian B. &quot;Dame&quot; #11" onerror="this.remove()" />
+        <img src="Dame4.JPG" alt="Damian B. &quot;Dame&quot; #11" onerror="this.remove()" />
         <span class="slot-label">Player photo</span>
       </div>
       <div>
@@ -115,7 +115,7 @@
     <div class="gallery">
       <div class="shot"><img src="Dame2.JPG" alt="Dame photo" loading="lazy" onerror="this.remove()" /><span>Photo</span></div>
       <div class="shot"><img src="Dame3.JPG" alt="Dame photo" loading="lazy" onerror="this.remove()" /><span>Photo</span></div>
-      <div class="shot"><img src="Dame4.JPG" alt="Dame photo" loading="lazy" onerror="this.remove()" /><span>Photo</span></div>
+      <div class="shot"><img src="Dame.JPG" alt="Dame photo" loading="lazy" onerror="this.remove()" /><span>Photo</span></div>
     </div>
   </div>
 </section>
@@ -156,5 +156,6 @@
   const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
+<script src="profile.js"></script>
 </body>
 </html>
